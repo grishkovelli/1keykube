@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"os"
 	"time"
+
+	"keykube/internal/password"
 )
 
 var Data Store
@@ -75,8 +77,12 @@ func (e *Entity) OldPassword() string {
 }
 
 func (e *Entity) Print() {
+	entropy := password.Entropy(e.Password())
+
 	fmt.Println()
 	fmt.Println("Login:", e.Name)
+	fmt.Printf("Entropy: %.2f\n", entropy)
+	fmt.Printf("Strength: %v\n", password.ClasifyEntropy(entropy))
 	fmt.Println("Password:", e.Password())
 
 	if e.OldPassword() != "" {

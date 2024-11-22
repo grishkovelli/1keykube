@@ -6,7 +6,7 @@ import (
 	"github.com/atotto/clipboard"
 	"github.com/spf13/cobra"
 
-	"keykube/pkg/store"
+	"keykube/internal/store"
 )
 
 var copyCmd = &cobra.Command{

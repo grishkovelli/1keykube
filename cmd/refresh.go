@@ -5,9 +5,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"keykube/pkg/password"
-	"keykube/pkg/store"
-	"keykube/pkg/utils"
+	"keykube/internal/password"
+	"keykube/internal/store"
+	"keykube/internal/utils"
 )
 
 var refreshCmd = &cobra.Command{

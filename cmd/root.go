@@ -7,7 +7,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"keykube/pkg/password"
+	"keykube/internal/password"
 )
 
 type SecretParams struct {

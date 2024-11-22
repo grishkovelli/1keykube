@@ -7,8 +7,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"keykube/pkg/store"
-	"keykube/pkg/utils"
+	"keykube/internal/store"
+	"keykube/internal/utils"
 )
 
 var delCmd = &cobra.Command{

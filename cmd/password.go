@@ -5,14 +5,15 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"keykube/pkg/password"
+	"keykube/internal/password"
 )
 
 var passwordCmd = &cobra.Command{
 	Use:   "password",
 	Short: "Generate a password",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(password.Generate(&params.Spec))
+		pass := password.Generate(&params.Spec)
+		fmt.Println(pass, password.Entropy(pass))
 	},
 }
 

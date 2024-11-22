@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"keykube/pkg/store"
+	"keykube/internal/store"
 )
 
 var renameCmd = &cobra.Command{
